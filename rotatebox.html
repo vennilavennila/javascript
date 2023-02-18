@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>rotate</title>
+        <style>
+            #box{
+                height: 305px;
+                width: 306px;
+                margin: auto;
+                margin-top: 100px;
+                animation-name: circle;
+                animation-iteration-count:1s;
+                animation-duration: 5s;
+                animation-timing-function: linear;
+                
+            }
+            #yellow{
+                height: 100px;
+                width: 100px;
+                float: left;
+                background-color: yellow;
+            }
+            #blue1{
+                height: 100px;
+                width: 100px;
+                float: left;
+                background-color: blue;
+            }
+            #green1{
+                height: 100px;
+                width: 100px;
+                float: left;
+                background-color: yellowgreen;
+            }
+            #red1{
+                height: 100px;
+                width: 100px;
+                float: left;
+                background-color: red;
+            }
+            #white{
+                height: 100px;
+                width: 100px;
+                float: left;
+                background-color: white;
+            }
+            #orange{
+                height: 100px;
+                width: 100px;
+                float: left;
+                background-color: orange;
+            }
+            #green2{
+                height: 100px;
+                width: 100px;
+                float: left;
+                background-color: yellowgreen;
+            }
+            #blue2{
+                height: 100px;
+                width: 100px;
+                float: left;
+                background-color: blue;
+            }
+            #red2{
+                height: 100px;
+                width: 100px;
+                float: left;
+                background-color: red;
+            }
+            h1{
+                text-align: center;
+            }
+            @keyframes circle{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div id="yellow"></div>
+            <div id="blue1"></div>
+            <div id="green1"></div>
+            <div id="red1"></div>
+            <div id="white">
+                <h1>hmc</h1>
+            </div>
+            <div id="orange"></div>
+            <div id="green2"></div>
+            <div id="blue2"></div>
+            <div id="red2"></div>
+        </div>
+    </body>
+</html>

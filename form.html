@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 500px;
+            width: 1000px;
+            border: 1px solid grey;
+            background-color: lightgray;
+        }
+        ol li{
+            list-style-type: none;
+        }
+        h1{
+            text-align: center;
+        }
+        input[type=submit]{
+            font-size: 20px;
+            background-color: gray;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 40px;
+        }
+        input[type=reset]{
+            font-size: 20px;
+            background-color: gray;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+        input[type=dob]{
+            margin-left: 65px;
+        }
+        input[type=email]{
+            margin-left:95px;
+        }
+        input[type=tel]{
+            margin-left:48px;
+        }
+        input{
+            background-color: gray;
+            border: none;
+            margin-left: 80px;
+            border-radius: 5px;
+        }
+        #one,#two,#three,#four,#five{
+        color: red;
+        font-size: small;
+    }
+    #nameerror{
+        color: red;
+        font-size: small;
+    }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>HTML Form</h1>
+        <form onsubmit="return validate()">
+            <ol>
+                <li>
+                    <label for="fname">First Name :</label>
+                    <input type="text"id="fname"name="fname">
+                </li>
+                <li id="one"></li>
+                <li id="nameerror"></li>
+            </ol>
+            <ol>
+                <li>
+                    <label for="lname">Last Name :</label>
+                    <input type="text"id="lname"name="lname">
+                </li>
+                <li id="two"></li>
+            </ol>
+            <ol>
+                <li>
+                    <label for="dob">Date of Birth :</label>
+                    <input type="dob"id="dob"name="dob">
+                </li>
+                <li id="three"></li>
+            </ol>
+            <ol>
+                <li>
+                    <label for="mailid">Email id :</label>
+                    <input type="email"id="mailid"name="mailid">
+                    <li id="four"></li>
+                </li>
+            </ol>
+            <ol>
+                <li>
+                    <label for="mobnum">Mobile Number :</label>
+                    <input type="tel"id="mobnum"name="mobile">
+                    <li id="five"></li>
+                </li>
+            </ol>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+    <script>
+        function validate(){
+            var fname=document.getElementById('fname').value;
+            var text=/^[A-Z||a-z]+$/;
+            var lname=document.getElementById('lname').value;
+            var dob=document.getElementById('dob').value;
+            var mail=document.getElementById('mailid').value;
+            var mobile=document.getElementById('mobnum').value;
+
+            if(fname===""){
+                document.getElementById("one").innerHTML="Fname must be fill";
+                document.getElementById('fname').style.border='2px solid red';
+                return false;
+            }
+            else if(!fname.match(text)){
+                document.getElementById('nameerror').innerHTML="textonly";
+                document.getElementById('fname').style.border='2px solid red';
+            }
+           else{
+            document.getElementById("one").style.display='none';
+            document.getElementById('fname').style.border='2px solid green';
+           }
+           if(lname===""){
+                document.getElementById("two").innerHTML="Lname must be fill";
+                document.getElementById('lname').style.border='2px solid red';
+                return false;
+            }
+           else{
+            document.getElementById("two").style.display='none';
+            document.getElementById('lname').style.border='2px solid green';
+           }
+           if(dob===""){
+                document.getElementById("three").innerHTML="dob must be fill";
+                document.getElementById('dob').style.border='2px solid red';
+                return false;
+            }
+           else{
+            document.getElementById("three").style.display='none';
+            document.getElementById('dob').style.border='2px solid green';
+           }
+           if(mail===""){
+                document.getElementById("four").innerHTML="mail id must be fill";
+                document.getElementById('mailid').style.border='2px solid red';
+                return false;
+            }
+           else{
+            document.getElementById("four").style.display='none';
+            document.getElementById('mailid').style.border='2px solid green';
+           }
+           if(mobile===""){
+                document.getElementById("five").innerHTML="mobile no must be fill";
+                document.getElementById('mobnum').style.border='2px solid red';
+                return false;
+            }
+           else{
+            document.getElementById("five").style.display='none';
+            document.getElementById('mobnum').style.border='2px solid green';
+           }
+        }
+    </script>
+</body>
+</html>

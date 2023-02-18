@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var matrixA=[[1,2,3],[4,5,6],[7,8,9]];
+        var matrixB=[[9,8,7],[6,5,4],[3,2,1]];
+        var rowA=matrixA.length;
+        console.log(rowA);
+        var colA=matrixA[0].length;
+        console.log(colA);
+        var rowB=matrixB.length;
+        console.log(rowB);
+        var colB=matrixB[0].length;
+        console.log(colB);
+        if(rowA==rowB & colA==colB){
+            console.log("rowa==rowb");
+            for(var i=0;i<rowA;i++){
+                for(var j=0;j<rowB;j++){
+                    var add=" ";
+                    add=matrixA[i][j]+matrixB[i][j];
+                    document.write(add);
+                }
+                document.write("<br>");
+            }
+        }
+        else{
+            document.write("row and col not equal");
+        }
+        document.write("<br>");
+    </script>
+</body>
+</html>
